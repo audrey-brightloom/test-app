@@ -1,0 +1,19 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: test
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: semver: 1.16
+spec:
+  releaseName: nginx-test
+  chart:
+    git: git@github.com:audrey-brightloom/test-app
+    path: test-nginx
+    ref: master
+  values:
+    image:
+      repository: nginx
+      tag: 1.16
+    replicaCount: 1
