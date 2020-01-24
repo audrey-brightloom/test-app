@@ -16,5 +16,5 @@ spec:
   values:
     image:
       repository: nginx
-      tag: 1.16.1
+      tag: 1.17.8
     replicaCount: 1
