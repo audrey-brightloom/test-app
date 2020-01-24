@@ -1,3 +1,4 @@
+---
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
@@ -15,5 +16,5 @@ spec:
   values:
     image:
       repository: nginx
-      tag: 1.16
+      tag: 1.16.0
     replicaCount: 1
